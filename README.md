@@ -1,5 +1,7 @@
 # Mon Deen
 
+[Ouvrir Mon Deen](https://lilegyy.github.io/mon-deen/)
+
 Version du 30 octobre 2026 : carnet personnel en français pour découvrir les bases de l’islam. Le projet Révise STL reste dans son dossier d’origine.
 
 ## Dans l’application
