@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#4c3274">
+  <meta name="description" content="Un carnet pour apprendre son deen, pas à pas : leçons, cartes mémoire et repères sourcés.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Mon Deen">
+  <title>Mon Deen — Le savoir, à ton rythme</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modules.css">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('mon-deen-theme')||'light'}catch{}</script>
+  <script src="content.js" defer></script>
+  <script src="names.js" defer></script>
+  <script src="arabic.js" defer></script>
+  <script src="curriculum.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+  <aside class="sidebar">
+    <a class="brand" href="#home" aria-label="Mon Deen, accueil"><span class="brand-symbol" aria-hidden="true">✳</span>mon deen<span>.</span></a>
+    <p class="brand-caption">LE SAVOIR, À TON RYTHME</p>
+    <nav class="side-nav" aria-label="Navigation principale">
+      <a href="#home" data-nav="home"><span aria-hidden="true">⌂</span>Mon espace</a>
+      <a href="#learn" data-nav="learn"><span aria-hidden="true">▤</span>Mon parcours</a>
+      <a href="#names" data-nav="names"><span aria-hidden="true">✧</span>Les 99 noms</a>
+      <a href="#arabic" data-nav="arabic"><span aria-hidden="true" lang="ar">ع</span>L’atelier d’arabe</a>
+      <a href="#cards" data-nav="cards"><span aria-hidden="true">▱</span>Mes cartes mémoire</a>
+      <a href="#progress" data-nav="progress"><span aria-hidden="true">◴</span>Ma progression</a>
+      <a href="#sources" data-nav="sources"><span aria-hidden="true">⌘</span>Sources & repères</a>
+    </nav>
+    <div class="sidebar-note"><div class="small-arch" aria-hidden="true"></div><span class="eyebrow">UN PAS APRÈS L’AUTRE</span><p>Apprendre avec soin.<br>Avancer avec constance.</p><span class="note-line" aria-hidden="true"></span></div>
+    <div class="sidebar-bottom"><button class="text-link" data-install>Installer l’application</button><p><span class="status-dot" aria-hidden="true"></span>Ton carnet personnel<span class="small muted">Progression enregistrée sur cet appareil</span></p></div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="mobile-brand" href="#home">mon deen<span>.</span></a>
+      <div class="breadcrumb"><span>Mon Deen</span><i aria-hidden="true">/</i><b id="breadcrumb">Mon espace</b></div>
+      <div class="top-actions"><span id="network-status" class="network-status" aria-live="polite"></span><button id="search-toggle" class="icon-button" aria-label="Rechercher une leçon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg></button><button id="theme-toggle" class="icon-button" aria-label="Changer de thème"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.5 8.5 0 0 1 9.8 4a8.5 8.5 0 1 0 10.2 10.2Z"/></svg></button><span class="avatar" aria-label="Espace personnel">M</span></div>
+    </header>
+    <main id="main" tabindex="-1"><div class="loading-state"><span class="loading-dot"></span>Ton carnet se prépare…</div></main>
+    <footer class="footer"><span>Comprendre. Retenir. Grandir.</span><span>Mon Deen <span aria-hidden="true">·</span> À ton rythme</span></footer>
+  </div>
+  <nav class="mobile-nav" aria-label="Navigation mobile"><a href="#home" data-nav="home"><span aria-hidden="true">⌂</span>Accueil</a><a href="#learn" data-nav="learn"><span aria-hidden="true">▤</span>Parcours</a><a href="#cards" data-nav="cards"><span aria-hidden="true">▱</span>Cartes</a><a href="#progress" data-nav="progress"><span aria-hidden="true">◴</span>Progrès</a><a href="#sources" data-nav="sources"><span aria-hidden="true">⌘</span>Sources</a></nav>
+  <dialog id="search-dialog" class="search-dialog"><div class="dialog-heading"><div><span class="eyebrow">DANS TON CARNET</span><h2>Une notion à retrouver ?</h2></div><button class="icon-button" data-close aria-label="Fermer la recherche">×</button></div><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="search-input" type="search" placeholder="Intention, piliers, comportement…" aria-label="Rechercher dans les leçons" autocomplete="off"></label><div id="search-results" aria-live="polite"></div></dialog>
+</body>
+</html>
