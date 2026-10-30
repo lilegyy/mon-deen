@@ -6,12 +6,13 @@ Version du 30 octobre 2026 : carnet personnel en français pour découvrir les b
 
 ## Dans l’application
 
-- Quinze leçons sourcées : noms d’Allah, écriture arabe, sons, voyelles, solaires/lunaires, ablutions, prière, quatre écoles, salafiyya et six leçons de fondements.
+- Seize leçons sourcées : noms d’Allah, écriture arabe, sons, voyelles, solaires/lunaires, ablutions, prière, quatre écoles, salafiyya, Dalā’il al-Khayrāt et six leçons de fondements.
 - Atelier de 99 noms avec sens français, translittération et suivi.
 - Atelier des 28 lettres : formes, prononciation, points d’articulation, copie au doigt et fiche à imprimer.
 - Comparaison des quatre écoles dans les fiches de pratique, avec filtre mémorisé ; aucune école choisie par défaut.
 - Thème violet, lavande et ivoire.
-- Un quiz corrigé par leçon et 153 cartes mémoire.
+- Une lecture guidée des Dalā’il al-Khayrāt : auteur, contenu, vocabulaire, rythme de lecture, avis attribués et distinction des sources.
+- Un quiz corrigé par leçon et 159 cartes mémoire.
 - Recherche, favoris, notes personnelles, suivi des leçons étudiées.
 - Révision des cartes demain ou dans trois jours, avec révision libre toujours disponible.
 - Sauvegarde dans le navigateur, export et restauration JSON.
@@ -31,7 +32,7 @@ Pour une mise à jour : enregistrer les changements dans `main`, pousser cette b
 
 ## Ajouter une leçon
 
-Les six leçons initiales sont dans `dist/content.js`. Les nouveaux parcours et références sont dans `dist/curriculum.js`, les 99 noms dans `dist/names.js` et les 28 lettres dans `dist/arabic.js`. Chaque leçon possède un identifiant stable, un titre, une catégorie, une durée de lecture estimée, une description, des sections, des points essentiels, un exercice de réflexion, des sources, un quiz et des cartes. Les compteurs s’adaptent au nombre de leçons.
+Les six leçons initiales sont dans `dist/content.js`. Les premiers parcours et références sont dans `dist/curriculum.js`, la fiche Dalā’il al-Khayrāt dans `dist/dalail.js`, les 99 noms dans `dist/names.js` et les 28 lettres dans `dist/arabic.js`. Chaque leçon possède un identifiant stable, un titre, une catégorie, une durée de lecture estimée, une description, des sections, des points essentiels, un exercice de réflexion, des sources, un quiz et des cartes. Les compteurs s’adaptent au nombre de leçons.
 
 Conserver les identifiants existants et l’ordre des cartes déjà publiées pour préserver les progrès. Vérifier les sources de chaque nouveau contenu. Les suggestions d’organisation personnelle doivent rester distinctes des prescriptions religieuses. Les divergences doivent être attribuées et expliquées lorsqu’elles sont abordées.
 
