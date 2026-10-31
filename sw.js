@@ -1,7 +1,7 @@
-const VERSION = 'mon-deen-v4';
+const VERSION = 'mon-deen-v5';
 const BASE = new URL('./', self.location.href).href;
 const ASSETS = [
-  './', 'index.html', 'style.css', 'app.js', 'content.js', 'names.js', 'arabic.js', 'curriculum.js', 'dalail.js', 'modules.css', 'manifest.json',
+  './', 'index.html', 'style.css', 'app.js', 'content.js', 'names.js', 'arabic.js', 'curriculum.js', 'dalail.js', 'reading.js', 'arabic-workshop.js', 'modules.css', 'workshop.css', 'manifest.json',
   'assets/icon.svg', 'assets/icon-192.png', 'assets/icon-512.png', 'assets/apple-touch-icon.png',
   'assets/fonts/fonts.css', 'assets/fonts/dm-0.woff2', 'assets/fonts/dm-1.woff2',
   'assets/fonts/dm-2.woff2', 'assets/fonts/dm-3.woff2', 'assets/fonts/NotoNaskhArabic.ttf'
