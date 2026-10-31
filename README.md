@@ -2,17 +2,19 @@
 
 [Ouvrir Mon Deen](https://lilegyy.github.io/mon-deen/)
 
-Version du 30 octobre 2026 : carnet personnel en français pour découvrir les bases de l’islam. Le projet Révise STL reste dans son dossier d’origine.
+Version du 31 octobre 2026 : carnet personnel en français pour découvrir les bases de l’islam. Le projet Révise STL reste dans son dossier d’origine.
 
 ## Dans l’application
 
-- Seize leçons sourcées : noms d’Allah, écriture arabe, sons, voyelles, solaires/lunaires, ablutions, prière, quatre écoles, salafiyya, Dalā’il al-Khayrāt et six leçons de fondements.
+- Vingt-sept leçons sourcées : fondements, noms d’Allah, pratique, écoles, salafiyya, Dalā’il al-Khayrāt et lecture de l’arabe.
 - Atelier de 99 noms avec sens français, translittération et suivi.
-- Atelier des 28 lettres : formes, prononciation, points d’articulation, copie au doigt et fiche à imprimer.
+- Atelier d’écriture : 28 lettres, modèles isolés / début / milieu / fin, 10 mots vocalisés et les noms d’Allah à repasser. Annuler un trait, effacer, cacher le modèle et imprimer une fiche.
+- Espace distinct « Lire le Coran » : 14 étapes, 45 exercices avec aides à révéler, alphabet et points d’articulation, voyelles, sukūn, shadda, liaisons et premières règles de tajwid.
+- Al-Fātiḥa et al-Ikhlāṣ : 11 versets avec récitation d’al-Ḥuṣarī diffusée depuis EveryAyah, répétition en boucle et repères de lecture. Connexion nécessaire pour l’audio. Cadre pédagogique : Ḥafṣ d’après ʿĀṣim, sans lien avec le choix d’une école juridique.
 - Comparaison des quatre écoles dans les fiches de pratique, avec filtre mémorisé ; aucune école choisie par défaut.
 - Thème violet, lavande et ivoire.
 - Une lecture guidée des Dalā’il al-Khayrāt : auteur, contenu, vocabulaire, rythme de lecture, avis attribués et distinction des sources.
-- Un quiz corrigé par leçon et 159 cartes mémoire.
+- Un quiz corrigé par leçon et 181 cartes mémoire.
 - Recherche, favoris, notes personnelles, suivi des leçons étudiées.
 - Révision des cartes demain ou dans trois jours, avec révision libre toujours disponible.
 - Sauvegarde dans le navigateur, export et restauration JSON.
@@ -46,6 +48,12 @@ L’indication « Prêt hors ligne » confirme l’activation du cache de l’ap
 
 Les polices locales DM Sans et Noto Naskh Arabic, avec leurs licences sont conservées dans `dist/assets/fonts/`.
 
+Le parcours de lecture vise le déchiffrage avant même la compréhension du vocabulaire. Les écoutes des noms des lettres et les cours détaillés d’articulation restent des liens externes. Les récitations de deux sourates sont intégrées par verset. L’application ne reconnaît pas l’écriture ni la voix et ne certifie pas la récitation : l’apprentissage complet du Coran demande de pratiquer les passages inconnus, les arrêts et les cas particuliers avec correction orale.
+
+Les données du parcours de lecture sont dans `dist/reading.js`, ses ateliers dans `dist/arabic-workshop.js` et leur présentation dans `dist/workshop.css`. Les anciens identifiants de leçons et de cartes sont conservés pour préserver les progrès. Les tracés sont temporaires et s’effacent lors d’un changement de modèle ou d’une navigation.
+
 ## Vérifications
 
 Contrôles effectués : intégrité des 15 leçons, 99 noms et 28 lettres ; navigation, recherche, quiz corrigé, cartes mémoire, choix d’école et retour à la comparaison, noms retenus conservés après rechargement, export JSON, mode sombre. Affichage vérifié à 390 px et sur ordinateur, sans débordement horizontal. Les sons sont accessibles par liens externes ; les modèles d’écriture sont typographiques, sans animation certifiée de l’ordre des traits. Aucun essai sur un iPhone physique ni relecture intégrale par un enseignant n’a été effectué.
+
+Ajout du 31 octobre : `npm ci` puis `npm test` vérifient sans navigateur les 112 sélections de forme, les 10 mots, les 99 noms et Allah, le tracé et son annulation, les 14 étapes, les 45 exercices, les quiz, les commandes audio et la préservation d’une ancienne sauvegarde. Les 11 adresses audio répondent avec un fichier MP3. Ces tests utilisent un contexte de dessin simulé ; ils ne valident ni le rendu visuel, ni la qualité phonétique, ni les gestes sur un téléphone réel. La nouvelle interface n’a pas fait l’objet d’une vérification visuelle dans un navigateur.
