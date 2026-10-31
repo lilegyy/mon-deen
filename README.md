@@ -10,6 +10,7 @@ Version du 31 octobre 2026 : carnet personnel en français pour découvrir les b
 - Atelier de 99 noms avec sens français, translittération et suivi.
 - Atelier d’écriture : 28 lettres, modèles isolés / début / milieu / fin, 10 mots vocalisés et les noms d’Allah à repasser. Annuler un trait, effacer, cacher le modèle et imprimer une fiche.
 - Espace distinct « Lire le Coran » : 14 étapes, 45 exercices avec aides à révéler, alphabet et points d’articulation, voyelles, sukūn, shadda, liaisons et premières règles de tajwid.
+- Alphabet sonore : un enregistrement par lettre, bouton écouter / pause, réécoute et boucle. Schémas originaux de profil avec zone d’articulation surlignée, trois niveaux de gorge, vue du dessus pour ḍād et lām, repère nasal pour mīm et nūn.
 - Al-Fātiḥa et al-Ikhlāṣ : 11 versets avec récitation d’al-Ḥuṣarī diffusée depuis EveryAyah, répétition en boucle et repères de lecture. Connexion nécessaire pour l’audio. Cadre pédagogique : Ḥafṣ d’après ʿĀṣim, sans lien avec le choix d’une école juridique.
 - Comparaison des quatre écoles dans les fiches de pratique, avec filtre mémorisé ; aucune école choisie par défaut.
 - Thème violet, lavande et ivoire.
@@ -48,12 +49,18 @@ L’indication « Prêt hors ligne » confirme l’activation du cache de l’ap
 
 Les polices locales DM Sans et Noto Naskh Arabic, avec leurs licences sont conservées dans `dist/assets/fonts/`.
 
-Le parcours de lecture vise le déchiffrage avant même la compréhension du vocabulaire. Les écoutes des noms des lettres et les cours détaillés d’articulation restent des liens externes. Les récitations de deux sourates sont intégrées par verset. L’application ne reconnaît pas l’écriture ni la voix et ne certifie pas la récitation : l’apprentissage complet du Coran demande de pratiquer les passages inconnus, les arrêts et les cas particuliers avec correction orale.
+Le parcours de lecture vise le déchiffrage avant même la compréhension du vocabulaire. Les 28 enregistrements de lettres sont intégrés dans les fiches et diffusés depuis [L’Académie Langue Arabe](https://academielanguearabe.fr/blog-monde-arabe/langue/alphabet-arabe-audio/), avec attribution et lien de secours. Aucun fichier audio n’est copié dans le dépôt ni ajouté au cache hors connexion. Les exemples de voyelles a/i/ou n’ont pas d’audios séparés. Les récitations de deux sourates sont intégrées par verset. L’application ne reconnaît pas l’écriture ni la voix et ne certifie pas la récitation : l’apprentissage complet du Coran demande de pratiquer les passages inconnus, les arrêts et les cas particuliers avec correction orale.
+
+Les schémas situent les points d’articulation ; la langue dessinée en position de référence ne représente pas le mouvement exact de chaque lettre. Les particularités de l’alif de prolongation, de wāw/yāʾ consonnes, de l’emphase et de la résonance nasale sont expliquées. Références : [cours d’Imam Faisal](https://imamfaisal.com/articulation/) et [chapitre des makhārij d’al-Jazariyyah](https://muslimlearn.com/jazariyyah/chapter-02.html).
 
 Les données du parcours de lecture sont dans `dist/reading.js`, ses ateliers dans `dist/arabic-workshop.js` et leur présentation dans `dist/workshop.css`. Les anciens identifiants de leçons et de cartes sont conservés pour préserver les progrès. Les tracés sont temporaires et s’effacent lors d’un changement de modèle ou d’une navigation.
 
+Les adresses audio des lettres sont dans `dist/letter-audio.js` (ordre des 28 lettres de `arabic.js`). Les schémas et leurs repères sont dans `dist/articulation.js`.
+
 ## Vérifications
 
-Contrôles effectués : intégrité des 15 leçons, 99 noms et 28 lettres ; navigation, recherche, quiz corrigé, cartes mémoire, choix d’école et retour à la comparaison, noms retenus conservés après rechargement, export JSON, mode sombre. Affichage vérifié à 390 px et sur ordinateur, sans débordement horizontal. Les sons sont accessibles par liens externes ; les modèles d’écriture sont typographiques, sans animation certifiée de l’ordre des traits. Aucun essai sur un iPhone physique ni relecture intégrale par un enseignant n’a été effectué.
+Contrôles de la version initiale : intégrité des 15 leçons, 99 noms et 28 lettres ; navigation, recherche, quiz corrigé, cartes mémoire, choix d’école et retour à la comparaison, noms retenus conservés après rechargement, export JSON, mode sombre. Affichage initial vérifié à 390 px et sur ordinateur, sans débordement horizontal. Les modèles d’écriture sont typographiques, sans animation certifiée de l’ordre des traits. Aucun essai sur un iPhone physique ni relecture intégrale par un enseignant n’a été effectué.
 
 Ajout du 31 octobre : `npm ci` puis `npm test` vérifient sans navigateur les 112 sélections de forme, les 10 mots, les 99 noms et Allah, le tracé et son annulation, les 14 étapes, les 45 exercices, les quiz, les commandes audio et la préservation d’une ancienne sauvegarde. Les 11 adresses audio répondent avec un fichier MP3. Ces tests utilisent un contexte de dessin simulé ; ils ne valident ni le rendu visuel, ni la qualité phonétique, ni les gestes sur un téléphone réel. La nouvelle interface n’a pas fait l’objet d’une vérification visuelle dans un navigateur.
+
+Ajout audio et schémas : contrôles des 28 associations lettre/enregistrement, des 17 repères de localisation utilisés (ce n’est pas un décompte des makhārij traditionnels), de la lecture/pause/réécoute/boucle, du changement de lettre et des erreurs de lecture. Les 28 adresses externes ont répondu HTTP 200 avec le type audio/mpeg. Les lecteurs sont simulés dans les tests : la restitution sonore sur appareil et le rendu des schémas dans le navigateur restent à vérifier.
